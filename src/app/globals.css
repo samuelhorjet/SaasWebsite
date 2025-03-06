@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Adjust this value based on your header height */
+}
+@layer components {
+  .btn {
+    @apply px-4 py-2 md:px-6 md:py-3 lg:px-4 lg:py-2 rounded-xl hover:bg-[#001e80] tracking-tight;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply bg-transparent hover:bg-transparent hover:text-[#001e80] text-black;
+  }
+  .logo-tick {
+    @apply h-8 w-auto;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
