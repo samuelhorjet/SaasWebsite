@@ -75,7 +75,7 @@ const SecondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
 export const Testimonials = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [, setIsMounted] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
